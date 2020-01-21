@@ -2,14 +2,17 @@
 yum -y update
 cd
 yum install -y gcc make zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-cd ./oh-my-zsh/plugins
+wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+sed -i '161,171d' install.sh
+sed -i '243,267d' install.sh
+chmod 766 install.sh
+./install.sh
+cd ~/.oh-my-zsh/plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 git clone https://github.com/zsh-users/zsh-autosuggestions.git
 cd 
-sed -ie 's/ZSH_THEME="rubbyrussell"/ZSH_THEME="random"/g' .zshrc
-sed -ie 's/plugins=(git)/plugins=(git zsh_autosuggestions zsh_syntax_highlighting)/g' .zshrc
-source .zshrc
+sed -ie 's/ZSH_THEME="robbyrussell"/ZSH_THEME="random"/g' .zshrc
+sed -ie 's/plugins=(git)/plugins=(git zsh-autosuggestions zsh-syntax-highlighting)/g' .zshrc
 touch .vimrc
 echo '
 filetype plugin indent on
@@ -47,4 +50,4 @@ map mm G
 map ii gg
 map M <END>
 map U <HOME>' >> .vimrc
-
+zsh
