@@ -47,7 +47,7 @@ map K 5k
 map H 5h
 map L 5l
 map mm G
-map ii gg
+map uu gg
 map M <END>
 map U <HOME>' >> .vimrc
 rm -rf ~/install.sh
