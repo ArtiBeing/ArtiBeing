@@ -50,4 +50,5 @@ map mm G
 map ii gg
 map M <END>
 map U <HOME>' >> .vimrc
+rm -rf ~/install.sh
 zsh
