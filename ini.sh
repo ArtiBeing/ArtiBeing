@@ -1,7 +1,7 @@
 #! /bin/bash
 yum -y update
 cd
-yum install -y gcc make zsh
+yum install -y gcc make zsh wget
 wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 sed -i '161,171d' install.sh
 sed -i '243,267d' install.sh
