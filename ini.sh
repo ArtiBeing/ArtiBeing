@@ -1,10 +1,10 @@
 #! /bin/bash
 yum -y update
 cd
-yum install -y gcc make vim zsh wget
+yum install -y gcc make vim zsh wget tmux
 wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-sed -i '161,171d' install.sh
-sed -i '243,267d' install.sh
+sed -i '141,217d' install.sh
+sed -i '177,1d' install.sh
 chmod 766 install.sh
 ./install.sh
 cd ~/.oh-my-zsh/plugins
