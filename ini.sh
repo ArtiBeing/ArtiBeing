@@ -7,6 +7,7 @@ sed -i '141,217d' install.sh
 sed -i '177,201d' install.sh
 chmod 766 install.sh
 ./install.sh
+sed -i 's/bash/zsh/' /etc/passwd
 cd ~/.oh-my-zsh/plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 git clone https://github.com/zsh-users/zsh-autosuggestions.git
