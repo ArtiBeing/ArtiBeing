@@ -2,12 +2,8 @@
 yum -y update
 cd
 yum install -y gcc make vim zsh wget tmux
-wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-sed -i '141,217d' install.sh
-sed -i '177,201d' install.sh
-chmod 766 install.sh
-./install.sh
-sed -i 's/bash/zsh/g' /etc/passwd
+git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 cd ~/.oh-my-zsh/plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 git clone https://github.com/zsh-users/zsh-autosuggestions.git
@@ -51,5 +47,4 @@ map mm G
 map uu gg
 map M <END>
 map U <HOME>' >> .vimrc
-rm -rf ~/install.sh
 zsh
