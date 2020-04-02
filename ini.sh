@@ -12,6 +12,7 @@ sed -ie 's/ZSH_THEME="robbyrussell"/ZSH_THEME="random"/g' .zshrc
 sed -ie 's/plugins=(git)/plugins=(git zsh-autosuggestions zsh-syntax-highlighting)/g' .zshrc
 touch .vimrc
 echo '
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
 filetype plugin indent on
 syntax on
 set mouse=a
