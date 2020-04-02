@@ -38,7 +38,7 @@ set splitright
 set splitbelow
 inoremap jj <esc>
 map S :w<CR>
-map Q :q<CR>
+map Q :wq!<CR>
 map J 5j
 map K 5k
 map H 5h
