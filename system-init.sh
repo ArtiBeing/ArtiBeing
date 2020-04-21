@@ -1,7 +1,7 @@
 #! /bin/bash
 yum -y update
 cd
-yum install -y gcc make zsh wget tmux
+yum install -y vim gcc make zsh wget tmux
 git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 cd ~/.oh-my-zsh/plugins
